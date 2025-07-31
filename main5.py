@@ -77,7 +77,7 @@ def connect_to_mongodb():
     client = MongoClient(mongo_uri)
     db = client["sample_mflix"] 
 
-    db = client["hospital_db"]
+    
     return db
 
 # Initialize doctors in the database
