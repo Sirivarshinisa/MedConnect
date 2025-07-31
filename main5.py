@@ -73,7 +73,7 @@ def inject_custom_css():
 # MongoDB connection
 @st.cache_resource
 def connect_to_mongodb():
-    client = MongoClient("mongodb+srv://sirivarshinisa:<db_password>@cluster0.tn4glop.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+    client = MongoClient("mongodb://localhost:27017/")
     db = client["hospital_db"]
     return db
 
