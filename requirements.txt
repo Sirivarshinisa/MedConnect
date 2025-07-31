@@ -3,6 +3,6 @@ pymongo
 pandas
 datetime
 pathlib
-os
+
 doctors_data
 ObjectId
