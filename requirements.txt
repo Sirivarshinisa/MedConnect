@@ -4,5 +4,3 @@ pandas
 datetime
 pathlib
 
-doctors_data
-ObjectId
