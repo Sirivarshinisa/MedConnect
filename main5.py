@@ -9,11 +9,6 @@ from datetime import timedelta
 from pathlib import Path
 import os
 
-mongo_uri = os.getenv("MONGO_URI")  
-client = MongoClient(mongo_uri)
-db = client["sample_mflix"] 
-
-
 def inject_custom_css():
     st.markdown(
         """
@@ -78,7 +73,10 @@ def inject_custom_css():
 # MongoDB connection
 @st.cache_resource
 def connect_to_mongodb():
-    client = MongoClient("mongodb://localhost:27017/")
+    mongo_uri = os.getenv("MONGO_URI")  
+    client = MongoClient(mongo_uri)
+    db = client["sample_mflix"] 
+
     db = client["hospital_db"]
     return db
 
