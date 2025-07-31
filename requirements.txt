@@ -1,8 +1,6 @@
 streamlit
 pymongo
 pandas
-
 datetime
 pathlib
-doctors_data
 objectid
