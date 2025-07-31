@@ -7,6 +7,11 @@ from doctors_data import doctors  # Import doctors from the external Python file
 from datetime import datetime
 from datetime import timedelta
 from pathlib import Path
+import os
+
+mongo_uri = os.getenv("MONGO_URI")  
+client = MongoClient(mongo_uri)
+db = client["sample_mflix"] 
 
 
 def inject_custom_css():
